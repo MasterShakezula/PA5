@@ -1,0 +1,77 @@
+﻿  reverse.c
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\packages\pthreads.2.9.1.4\build\native\include\pthread.h(320,17): error C2011: 'timespec': 'struct' type redefinition
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\time.h(43): message : see declaration of 'timespec'
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(15,2): error C2061: syntax error: identifier 'off_t'
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(17,1): error C2059: syntax error: '}'
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(22,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(31,14): error C2065: 'thread_info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(31,14): error C2146: syntax error: missing ';' before identifier 'info'
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(31,19): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(31,35): error C2065: 'thread_info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(31,36): error C2059: syntax error: ')'
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(32,2): warning C4013: 'lseek' undefined; assuming extern returning int
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(32,16): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(32,17): error C2224: left of '.left_pos' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(33,2): warning C4013: 'read' undefined; assuming extern returning int
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(33,15): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(33,16): error C2224: left of '.left_buf' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(33,30): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(33,31): error C2224: left of '.len' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(34,6): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(34,7): error C2224: left of '.left_buf' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(34,20): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(34,21): error C2224: left of '.len' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(35,18): error C2065: 'off_t': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(35,13): error C2064: term does not evaluate to a function taking 0 arguments
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(35,26): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(35,27): error C2224: left of '.left_pos' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(35,42): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(35,43): error C2224: left of '.len' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(36,15): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(36,16): error C2224: left of '.right_buf' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(36,31): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(36,32): error C2224: left of '.len' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(37,6): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(37,7): error C2224: left of '.right_buf' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(37,21): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(37,22): error C2224: left of '.len' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(38,18): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(38,19): error C2224: left of '.left_buf' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(38,2): error C2198: 'reverse_str': too few arguments for call
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(39,18): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(39,19): error C2224: left of '.right_buf' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(39,2): error C2198: 'reverse_str': too few arguments for call
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(40,16): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(40,17): error C2224: left of '.left_pos' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(41,2): warning C4013: 'write' undefined; assuming extern returning int
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(41,16): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(41,17): error C2224: left of '.right_buf' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(41,32): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(41,33): error C2224: left of '.len' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(42,18): error C2065: 'off_t': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(42,13): error C2064: term does not evaluate to a function taking 0 arguments
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(42,26): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(42,27): error C2224: left of '.left_pos' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(42,42): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(42,43): error C2224: left of '.len' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(43,16): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(43,17): error C2224: left of '.left_buf' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(43,31): error C2065: 'info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(43,32): error C2224: left of '.len' must have struct/union type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(48,7): warning C4013: 'open' undefined; assuming extern returning int
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(51,14): error C2065: 'thread_info': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(51,14): error C2146: syntax error: missing ';' before identifier 'args'
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(51,18): error C2065: 'args': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(51,26): error C2109: subscript requires array or pointer type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(67,7): error C2065: 'args': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(67,9): error C2109: subscript requires array or pointer type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(68,7): error C2065: 'args': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(68,9): error C2109: subscript requires array or pointer type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(69,7): error C2065: 'args': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(69,9): error C2109: subscript requires array or pointer type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(70,7): error C2065: 'args': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(70,9): error C2109: subscript requires array or pointer type
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(72,58): error C2065: 'args': undeclared identifier
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(72,62): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(79,5): error C2084: function 'int main(void)' already has a body
+C:\Users\Samue\OneDrive\Documents\Fall 2022\COP4338 Sys Prog\PA5\PA5-ProgrammingAssignment5\reverse.c(46): message : see previous definition of 'main'

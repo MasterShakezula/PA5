@@ -1,3 +1,4 @@
+//use this version of reverse.c incase the other one doesn't work
 #include<string.h>
 #include<stdio.h>
 #include<stdlib.h>
@@ -5,6 +6,7 @@
 #include <pthread.h>
 #include <time.h>
 #include <math.h>
+#include <sys/types.h> //maybe put this
 #define THREADS 2
 int fd, buf_size;
 long file_size;
