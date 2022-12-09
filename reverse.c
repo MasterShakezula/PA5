@@ -53,9 +53,9 @@ void* reverse(void* args){
 void main(int argc, char *argv[]){
 	
 	
-	int THREADS = 2;
-	char* filename = "input.txt";
-	int totalMemSize = 0;
+	int NUMOFTHREADS = 2;
+	char* FileName = "input.txt";
+	int MemorySize = 0;
 	int FlagActivate = 0;
 	int j = 0;
 	char* ch;
@@ -66,8 +66,8 @@ void main(int argc, char *argv[]){
 		if(argv[j][0] == '-'){
 				strcpy(ch, argv[j]);
 				if(!strcmp(ch+1, "nthreads")){
-					THREADS = strtol(argv[j+1], (char **)NULL, 10);
-					if((THREADS < 1) || (THREADS > 90)){
+					NUMOFTHREADS = strtol(argv[j+1], (char **)NULL, 10);
+					if((NUMOFTHREADS < 1) || (NUMOFTHREADS > 90)){
 						fprintf(stderr, "amounts of threads has to be between 1-90.\n");
 						argc = 0;
 						exit(1);
@@ -76,11 +76,11 @@ void main(int argc, char *argv[]){
 					continue;
 				}
 				else if(!strcmp(ch+1, "input")){
-					filename = argv[j+1];
+					FileName = argv[j+1];
 					continue;
 				}
 				else if(!strcmp(ch+1, "mem")){
-					totalMemSize = strtol(argv[j+1], (char **)NULL, 10);
+					MemorySize = strtol(argv[j+1], (char **)NULL, 10);
 					FlagActivate = 1;
 					continue;
 				}
@@ -89,14 +89,14 @@ void main(int argc, char *argv[]){
 	
 	
 	pthread_mutex_init(&file_lock, NULL);
-	fd = open(filename, O_RDWR);
+	fd = open(FileName, O_RDWR);
 	char c;
 	int n_read;
-	thread_info args[THREADS];
+	thread_info args[NUMOFTHREADS];
 	file_size = lseek(fd, 0, SEEK_END);
 	
 	printf("FILE SIZE = %ld\n", file_size);
-	if((THREADS > (file_size/2)) || (FlagActivate && (THREADS > (totalMemSize/2)))){
+	if((NUMOFTHREADS > (file_size/2)) || (FlagActivate && (NUMOFTHREADS > (MemorySize/2)))){
 	
 		fprintf(stderr, "Number of threads cant be greater than half the input file size, or the chosen memory size.\n");
 		argc = 0;
@@ -104,19 +104,19 @@ void main(int argc, char *argv[]){
 		
 	}
 	long remainder;
-	if(!FlagActivate || totalMemSize > file_size){ 
+	if(!FlagActivate || MemorySize > file_size){ 
 		printf("buffer size determined by file size\n");
-		buf_size = (int)(ceil(file_size/(2.0*THREADS)) + 1);
+		buf_size = (int)(ceil(file_size/(2.0*NUMOFTHREADS)) + 1);
 		remainder = file_size >> 1;
 	}
 	else{
-		buf_size = (totalMemSize/THREADS)/2; 
-		remainder = totalMemSize >> 1;
+		buf_size = (MemorySize/NUMOFTHREADS)/2; 
+		remainder = MemorySize >> 1;
 	}
-	char* left_buf[THREADS];
-	char* right_buf[THREADS];
-	pthread_t thread[THREADS];
-	for(int i = 0; i < THREADS;i++){
+	char* left_buf[NUMOFTHREADS];
+	char* right_buf[NUMOFTHREADS];
+	pthread_t thread[NUMOFTHREADS];
+	for(int i = 0; i < NUMOFTHREADS;i++){
 		
 		
 		left_buf[i] = (char*) malloc(buf_size);
@@ -124,16 +124,16 @@ void main(int argc, char *argv[]){
 		
 	}
 
-	for(int i = 0; i < THREADS;i++){
+	for(int i = 0; i < NUMOFTHREADS;i++){
 		args[i].left_buf = left_buf[i];
 		args[i].right_buf = right_buf[i];
 		args[i].left_pos = i*(buf_size-1);
-		args[i].len = (i != THREADS-1)?(buf_size-1):remainder;
+		args[i].len = (i != NUMOFTHREADS-1)?(buf_size-1):remainder;
 		remainder -= (buf_size-1);
 		printf("spawning  thread #%d w/ len = %d, left_pos = %d\n", i, args[i].len, args[i].left_pos); 
 		pthread_create(thread + i, NULL, reverse, (void *) (args+i));
 	}
-	for(int i = 0; i < THREADS;i++)
+	for(int i = 0; i < NUMOFTHREADS;i++)
 		pthread_join(thread[i], NULL);
 
 }
