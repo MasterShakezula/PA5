@@ -1,4 +1,4 @@
-//use this version of reverse.c incase the other one doesn't work
+
 #include<string.h>
 #include<stdio.h>
 #include<stdlib.h>
