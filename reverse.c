@@ -5,7 +5,6 @@
 #include <pthread.h>
 #include <time.h>
 #include <math.h>
-
 int fd, buf_size;
 long file_size;
 typedef struct{
@@ -15,8 +14,6 @@ typedef struct{
 	int len;
 } thread_info;
 pthread_mutex_t file_lock;
-
-
 void reverse_str(char* str){
 	int len = strlen(str);
 	int half = len >> 1;
@@ -28,20 +25,16 @@ void reverse_str(char* str){
 }
 void* reverse(void* args){
 	thread_info info = *((thread_info*)args);
-	
 	pthread_mutex_lock(&file_lock);
 	lseek(fd, info.left_pos,SEEK_SET);
 	read(fd, info.left_buf, info.len);	
 	lseek(fd, (off_t)(-(info.left_pos + info.len)),SEEK_END);
 	read(fd, info.right_buf, info.len);
-	pthread_mutex_unlock(&file_lock);
-	
+	pthread_mutex_unlock(&file_lock);	
 	info.left_buf[info.len] = '\0';
-	info.right_buf[info.len] = '\0';
-	
+	info.right_buf[info.len] = '\0';	
 	reverse_str(info.left_buf);
-	reverse_str(info.right_buf);
-	
+	reverse_str(info.right_buf);	
 	pthread_mutex_lock(&file_lock);
 	lseek(fd, info.left_pos,SEEK_SET);
 	write(fd, info.right_buf, info.len);
@@ -49,9 +42,7 @@ void* reverse(void* args){
 	write(fd, info.left_buf, info.len);
 	pthread_mutex_unlock(&file_lock);
 }
-
 void main(int argc, char *argv[]){
-	
 	
 	int NUMOFTHREADS = 2;
 	char* FileName = "input.txt";
@@ -59,9 +50,6 @@ void main(int argc, char *argv[]){
 	int FlagActivate = 0;
 	int j = 0;
 	char* ch;
-	
-	
-
 	for(j = 1; j < argc; j++){
 		if(argv[j][0] == '-'){
 				strcpy(ch, argv[j]);
@@ -70,8 +58,7 @@ void main(int argc, char *argv[]){
 					if((NUMOFTHREADS < 1) || (NUMOFTHREADS > 90)){
 						fprintf(stderr, "amounts of threads has to be between 1-90.\n");
 						argc = 0;
-						exit(1);
-						
+						exit(1);						
 					}
 					continue;
 				}
@@ -85,23 +72,18 @@ void main(int argc, char *argv[]){
 					continue;
 				}
 		}
-	}
-	
-	
+	}		
 	pthread_mutex_init(&file_lock, NULL);
 	fd = open(FileName, O_RDWR);
 	char c;
 	int n_read;
 	thread_info args[NUMOFTHREADS];
-	file_size = lseek(fd, 0, SEEK_END);
-	
+	file_size = lseek(fd, 0, SEEK_END);	
 	printf("FILE SIZE = %ld\n", file_size);
-	if((NUMOFTHREADS > (file_size/2)) || (FlagActivate && (NUMOFTHREADS > (MemorySize/2)))){
-	
+	if((NUMOFTHREADS > (file_size/2)) || (FlagActivate && (NUMOFTHREADS > (MemorySize/2)))){	
 		fprintf(stderr, "Number of threads cant be greater than half the input file size, or the chosen memory size.\n");
 		argc = 0;
-		exit(1);
-		
+		exit(1);		
 	}
 	long remainder;
 	if(!FlagActivate || MemorySize > file_size){ 
@@ -116,14 +98,10 @@ void main(int argc, char *argv[]){
 	char* left_buf[NUMOFTHREADS];
 	char* right_buf[NUMOFTHREADS];
 	pthread_t thread[NUMOFTHREADS];
-	for(int i = 0; i < NUMOFTHREADS;i++){
-		
-		
+	for(int i = 0; i < NUMOFTHREADS;i++){				
 		left_buf[i] = (char*) malloc(buf_size);
-		right_buf[i] = (char*) malloc(buf_size);
-		
+		right_buf[i] = (char*) malloc(buf_size);		
 	}
-
 	for(int i = 0; i < NUMOFTHREADS;i++){
 		args[i].left_buf = left_buf[i];
 		args[i].right_buf = right_buf[i];
@@ -135,5 +113,4 @@ void main(int argc, char *argv[]){
 	}
 	for(int i = 0; i < NUMOFTHREADS;i++)
 		pthread_join(thread[i], NULL);
-
 }
